@@ -154,12 +154,16 @@
     <h1>Something is taking shape.</h1>
 
     <!-- FORM -->
-    <div class="form-box">
-      <input type="text" placeholder="Your name">
-      <input type="email" placeholder="Your email">
-      <textarea placeholder="Leave a message..."></textarea>
-      <button>Leave your mark →</button>
-    </div>
+<form name="contact" method="POST" data-netlify="true" netlify>
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="form-box">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Leave a message..."></textarea>
+    <button type="submit">Leave your mark →</button>
+  </div>
+</form>
 
     <div class="links">
       A mark is about to be made.
