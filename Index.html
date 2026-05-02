@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Sketch Daily</title>
+
+  <link rel="icon" href="/images/web-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orange1: #FF6A3D;
+      --orange2: #FF8A5C;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--orange1), var(--orange2));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 520px;
+      padding: 24px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* LOGO */
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      width: 120px;
+      opacity: 0.95;
+    }
+
+    .brand-text {
+      margin-top: 12px;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    /* FORM */
+    .form-box {
+      margin-top: 25px;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.15);
+      color: white;
+    }
+
+    .form-box input::placeholder,
+    .form-box textarea::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .form-box textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      background: white;
+      color: #FF6A3D;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-box button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .links {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      opacity: 0.65;
+    }
+
+    .sketch {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.12;
+      font-size: 40px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -12px); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <img src="/images/Logo-white.svg" alt="logo">
+      <div class="brand-text">One Sketch Daily</div>
+    </div>
+
+    <h1>Something is taking shape.</h1>
+
+    <!-- FORM -->
+    <div class="form-box">
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Your email">
+      <textarea placeholder="Leave a message..."></textarea>
+      <button>Leave your mark →</button>
+    </div>
+
+    <div class="links">
+      A mark is about to be made.
+    </div>
+
+  </div>
+
+  <div class="sketch">✦</div>
+
+</body>
+</html>
